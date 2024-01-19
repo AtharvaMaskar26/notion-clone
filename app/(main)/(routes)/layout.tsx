@@ -7,7 +7,7 @@ import { Spinner } from "@/components/Spinner";
 
 import { redirect } from "next/navigation";
 
-import Navigation from "../_components/Navigation";
+import {Navigation} from "../_components/Navigation";
 
 
 const MainLayout = ({
