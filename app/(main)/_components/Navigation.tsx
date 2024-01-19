@@ -6,13 +6,16 @@ import { ChevronsLeft, MenuIcon } from 'lucide-react'
 import {useMediaQuery} from "usehooks-ts"
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { api } from '@/convex/_generated/api'
 import { UserItem } from './user-item'
+import { useQuery } from 'convex/react'
 
 type Props = {}
 
 const Navigation = (props: Props) => {
     const pathname = usePathname();
     const isMobile = useMediaQuery("(max-width: 768px)");
+    const documents = useQuery(api.documents.get);
 
     const handleMouseDown = (
         event: React.MouseEvent<HTMLDivElement, MouseEvent>
