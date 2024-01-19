@@ -6,6 +6,8 @@ import { ChevronsLeft, MenuIcon } from 'lucide-react'
 import {useMediaQuery} from "usehooks-ts"
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { UserItem } from './user-item'
+
 type Props = {}
 
 const Navigation = (props: Props) => {
@@ -31,7 +33,7 @@ const Navigation = (props: Props) => {
           sidebarRef.current.style.width = isMobile ? "100%" : "240px";
           navbarRef.current.style.setProperty(
             "width",
-            isMobile ? "0" : "calc(100% - 240px)"
+            isMobile ? "0" : "calc(100%-240px)"
           );
           navbarRef.current.style.setProperty(
             "left",
@@ -118,9 +120,7 @@ const Navigation = (props: Props) => {
                     />
                 </div>
                 <div>
-                    <p>
-                        Action Items
-                    </p>
+                  <UserItem />
                 </div>
                 <div className="mt-4">
                     <p>Documents</p>
