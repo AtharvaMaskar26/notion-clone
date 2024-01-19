@@ -1,0 +1,1 @@
+1. Reusable components inside components and non-resuable components inside _components
